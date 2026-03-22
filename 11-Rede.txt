@@ -1,0 +1,66 @@
+VPC = Virtual Private Cloud 
+
+É a forma de criar um ambiente virtual privado na nuvem 
+
+Toda VPC está dentro de uma região de disponibilidade. Toda subnet está dentro de uma VPC Por padrão ela não tem acesso a internet, para isso é necessário adicionar o recurso internet gateway
+
+Tabela de roteamento permite a conexão entre duas subnet
+
+NACL = Network acess list 
+
+Funciona como um firewall para a subnet
+
+A vantagem de criar regra nela ao invés de criar na própria instância, é que no caso de um subnet com 100 instâncias, você teria que fazer 100x a configuração, enquanto na NACL você coloca a regra para toda a subnet
+
+
+VPC PERING (conexões de emparelhamento) (classic link)
+
+Ele é utilizado para comunicar dois host de VPCs diferentes. 
+
+Exemplo de aplicação, você pode ter um VPC destinada para uma filial do Rio de Janeiro e outra VPC para São Paulo mas precisa compartilhar dados entre elas.
+
+Inclusive é possível fazer entre contas AWS diferentes
+
+
+VPC Endpoints
+
+Exemplo de aplicação: Se você tem um EC2 dentro de uma subnet que está dentro de uma VPC e precisa acessar algo no S3, esse acesso não ocorre de forma interna (dentro da própria rede AWS), ele sai via internet, entra na rede AWS e acessa o S3, pois, todo arquivo S3 gera uma URL mas é possível corrigir isso com o VPC endpoints
+
+Tipos:
+
+Gateway: S3, DynamoDB 
+Interface: Outros serviços
+
+
+VPC Flow Logs 
+
+Utilizado para verificar o trafégo que acontece na VPC, subnet, interface da instância ec2 (elastic network interface)
+
+Excelente para encontrar erros
+
+
+Client e Site to Site VPN
+
+Exemplo de aplicação: Um funcionário que trabalha home office e precisa acessar recursos.
+
+
+AWS Private Link 
+
+Funciona como um tipo de endpoint 
+
+Exemplo de aplicação, você é um vendedor de SAAS, que está rodando na sua VPC. Esse software precisa entra na VPC do seu cliente para fazer algum tipo de monitaramento, serviço etc...
+O jeito mais comum seria pelo VPC peering, porém, ele não é escalável devido a complexidade de configuração do mesmo (VPC, Tabelas de rota, internet gateway, acl), necessitando apenas de um Network load balancer do lado do vendedor e uma ENI para receber o private link
+
+
+AWS Direct Connect 
+
+Ele é um link com uma vantangem maior que a VPN, pois, ele cria um link dedicado com você e sua AWS. 
+
+É literalmente um cabo conectado diretado na rede da AWS, além de segurança, você ganha velocidade.
+
+
+AWS Transit gateway 
+
+Mais um serviço, que ajuda na conexão de VPCs
+
+Basicamente é um sistema centralizado, onde toda VPC será conectada a ele, e logo passará a ter conexão com as demais VPC

@@ -1,0 +1,43 @@
+Princípios AWS: 
+
+- Escalabilidade 
+
+    - Vertical: Tipo + (t2.micro > t2.2xlarge)
+
+    - Horizontal: + Instâncias (Autoscaling + ELB (Elastic load balancer))
+
+- Elasticidade 
+
+    - Se adapatar automaticamente as mudanças (Load / carga). Exemplo criar um novo servidor se necessário e também excluir quando não for mais necessário
+
+    (Autoscaling + ELB)
+
+- Disponibilidade
+
+    Servidores em zonas diferentes, afim de garantir problemas de indisponibilidade. 
+
+    (Autoscaling)
+
+
+AUTOSCALING 
+
+1° Criar um modelo de instância (server) + script 
+2° Configurações do Autoscaling
+
+    Quando está adicionando novas instâncias, utilizamos o termo scaling out
+
+    Quando está removando instâncias, utilizamos o termo in
+
+
+ELB e ALB 
+
+o LoadBalancer, serve para fazer a gestão do acesso dos novos usuários ao servidor, essa gestão é previamente programada pelo especialista AWS, onde são definidos as regras de Elasticidade
+
+
+CRIANDO UM MODELO DE EXECUÇÃO
+
+O modelo será usado para ser atribuido em todas instâncias criadas. 
+
+
+CRIANDO UM AUTOSCALING GROUP E ALB 
+

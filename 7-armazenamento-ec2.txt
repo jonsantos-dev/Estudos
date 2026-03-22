@@ -1,0 +1,36 @@
+EBS (elastic block store) (disco)
+
+O disco da AWS é considerado de rede, devido o cluster no server de storage
+
+Observação: Dessa forma, é possível excluir o servidor principal que se comunicava com o storage e depois criar um novo servidor e buscar seus dados no storage
+
+
+Valores e tipos de EBS 
+
+HDD: lento + espaço (barato)
+SSD: Rapido - espaço (caro)
+
+
+É possível atribuir mais de um volume (disco) no mesmo servidor, desde os volumes estejam na mesma zona
+
+SNAPSHOT
+
+Snapshot é uma cópia do servidor / disco, é um serviço gratuito, porém, como normalmente ele armazena discos (o que consome espaço), isso sim é cobrado na AWS
+
+AMI (Amazon machine Image)
+
+É a criação de uma imagem ISO. 
+
+Exemplo: Você cria o server 1 e faz todas a configurações, instala todos os programas, define políticas etc... Se você criar um server 2 com uma ISO "Padrão", você vai ter que refazer todo o processo. Com a AMI você consegue criar uma ISO baseada no server 1 e aplicá-la no momento da criação do server 2.
+
+
+EFS (elastic file system)
+
+Funciona com um disco EBS, porém, o grande diferencial é que discos EFS podem ser compartilhos entre diferentes servidores (instâncias EC2), inclusive de zonas (regiões) diferentes. É como se fosse um arquivo compartilhado entre diferentes servidores. 
+
+Observação: É caro. 
+
+
+FSx
+
+Disco compartilhado de alta performance para windows

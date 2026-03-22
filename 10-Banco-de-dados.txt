@@ -1,0 +1,65 @@
+Relacional e não relacional 
+
+Relacional: Ideal para sistemas de gerenciamento de transações (bancos por exemplos)
+
+Não relacional: Big data e análises em tempo real
+
+
+AWS RDS: Relational Database (SQL)
+
+
+Os bancos de dados AWS (exemplo Aurora) não ficam dentro do server do usuário, pois, caso aconteça algo com o server do usuário, todos os dados poderiam ser comprometidos, a gestão (disponibilidade, flexibilidade e escalabilidade) do Banco fica por conta da AWS.
+
+Família AWS DB:
+
+- Aurora 
+- PostGres
+- MariaDB
+- MySQL
+- Microsoft SQL Server
+- Oracle
+
+
+O Aurora tem compatibilidade para MYSQL e Postgres mas NÃO existe FREE TIER 
+
+Porém o Aurora oferece 5x mais performance.
+
+
+ELASTICACHE (in memory)
+
+Foi criado para resolver o seguinte problema: O servidor precisa acessar o banco de dados, que normalmente é um disco, que mesmo sendo SSD, é mais lento que uma memória. 
+
+
+Exemplo de como funciona: Um usuário entra no site e busca o preço de um produto, então a requisição passa pelo LOAD BALANCER > SERVIDOR > Pergunta para o Elasticache: Se ele não tiver a informação, o server busca no banco de dados, porém, essa informação fica salva no Elasticache, então se um próximo usuário fizer a mesma pesquisa de preço no site, vai ter a resposta mais rapidamente. 
+
+Obs.: Só faz sentido para aplicações grandes, pois é muito caro.
+
+
+DynamoDB (NOSQL)
+
+Características: 
+
+- 3AZ (disponibilidade)
+- Serverless (não utiliza server ec2)
+
+
+Amazon Neptune 
+
+Aplicações recomendadas: 
+
+- Social Networks 
+- Links entre artigos 
+
+Uma característica interessante é o Graph Dataset, que é a visualização gráfica dos dados do banco
+
+
+AWS GLUE (ETL)
+
+Voltado para Analytics 
+
+Extract: S3 / RDS 
+
+Transform: Glue  
+
+Load: Redshift 
+

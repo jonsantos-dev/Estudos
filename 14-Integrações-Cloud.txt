@@ -1,0 +1,15 @@
+Kinesis 
+
+Servido criado para real-time data streaming. 
+
+Exemplo de aplicação: Um carro inteligente, que fica medindo informações como temperatura, bateria, calibragem de pneus, precisa captura esses dados em real time, o Kinesis streams faz isso, depois ele analisa no Kinesis Analytics e envia para análise posterior (um s3 por exemplo)
+
+AWS SQS (Simple queue service) Fila de mensagens 
+
+Exemplo de aplicação: Pessoas que acessam um website de e-commerce que está hospedado em um EC2. Quando uma pessoa faz uma compra, o site capta algumas informações, para gerar NF, frete, consultar estoque ETC, e cada uma dessas informações, são requisições individuais que podem ocasionar falhas, além de ser ineficiente. O SQS serve como um meio de campo, que após o cliente finalizar a compra, vai armazenar os dados dessa transação por no mínimo 4d e max 14d, e deixar disponível uma cópia para todas as outras aplicações do seu sistema, com uma latência menor que 10ms. 
+
+AWS SNS (Simples notification service) 
+
+Exemplo de aplicação: Ecommerce, a venda foi realizada. Essa transação gera uma mensagem que deve ser entregue para o departamento financeiro, entrega, estoque e e-mail. A diferença do SNS para SQS é que o SNS não armazena a informação, necessitando de subscribers.
+
+Observação, pode ser usado em conjunto com o SQS

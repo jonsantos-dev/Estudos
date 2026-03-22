@@ -1,0 +1,73 @@
+AWS Well Architected Framework
+
+
+Funciona como um manual de como construir infra, aplicações etc dentro da AWS
+
+- Infraestruturas (Aplicações mais seguras, eficientes e escaláveis)
+
+
+Pilar 1 - Excelência Operacional
+
+- Monitorar o Sistema
+
+Pilar 2 - Segurança 
+
+- Security group
+- ACL 
+- AWS Keymanagement system
+- AWS IAM
+
+Pilar 3 - Confiabilidade (Manter tudo funcionando mesmo em caso de falhas)
+
+- Multiplas AZ 
+- Route 53 
+- Escalabilidade
+
+Pilar 4 - Eficiência e Desempenho 
+
+- Autoscaling
+- Elastic Cache
+
+Pilar 5 - Otimização de custos 
+
+- Reserved Inst
+
+Pilar 6 - Sustentabilidade (Reduzir impacto ambiental)
+
+AWS CAF (Cloud adoption Framework)
+
+É um manual com tudo de bom que aconteceu com as migrações da AWS
+E pode ser considerado um manual de como uma empresa pode migrar para AWS
+
+- Reduz os riscos comerciais 
+- Melhora a performance ambiental, social e de governança 
+- Aumente a receita 
+- Aumente a eficiêcnia operacional
+
+Capacidades
+
+- Negócios 
+- Pessoas 
+- governança
+- Plataforma 
+- Segurança
+- Operações
+
+
+AWS EcoSystem 
+
+- Blog 
+- Forum
+- Whitepapers e guides
+- Partner Solutions
+
+
+AWS IQ
+
+Profissionais que precisam de ajuda de outro expert
+Funciona como um freelancer certificado pela AWS
+
+
+AWS Managed Services 
+
+Exemplo de aplicação: Você é um dono de uma empresa e não quer ter o trabalho de procurar profissionais específicos para cada área da AWS. Você pode contratar apenas um especialista para usar o AMS. Nesse serviço a AWS pega a sua estrutura cloud e gerencia tudo para você.

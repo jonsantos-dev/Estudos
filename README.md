@@ -1,0 +1,1 @@
+Repositório dedicado a registrar os estudos para a certificação AWS Cloud Practitioner

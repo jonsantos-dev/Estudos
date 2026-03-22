@@ -1,0 +1,33 @@
+Docker (Container) 
+
+Veio com a finalidade de resolver o problema de quando uma aplicação era desenvolvida em um servidor e tudo estava funcionando mas ao ser migrado para outro, deixava de funcionar.
+
+As antigas aplicações seguiam a seguinte cadeia hierarquica: Infraestrutura > Sistema operacional > Hypervisor (Monitor de VM) > VM (Sistema operacional > Biblioteca > app)
+
+E o problema é que quando você tenta migrar a aplicação, ela está diretamente associada a todos os itens da cadeia hierarquica.
+
+
+Aplicação com container, cadeia hierarquica: 
+
+Infraestrutura > Sistema operacional > Container Engine (Docker) > Container (Biblioteca > app) 
+
+Quando você precisa migrar a aplicação, você move todo o container.
+
+
+Amazon ECS (Elastic Container Service)
+
+
+Exemplo de aplicação: 
+
+Imagine duas AZ (Availability zone), onde você precisa criar/rodar seus containers. O ECS é onde você fará isso, e dentro do ECS você cria o cluster (agrupamento) dos mesmos. Cada container possui um arquivo chamado TASK, que possui código JSON com todas as suas configurações.
+
+É possível utilizar Auto Scaling group, para caso um container cair, subir outro automaticamente.
+
+Observação: O conteúdo que tem dentro do container (app), chamamos de imagem que tem dentro do console, é chamada de Registry, fica armazenada no ECR (Elastic container Registry)
+
+
+Amazon Elastic Kubernetes Service (Amazon EKS)
+
+O Amazon Elastic Kubernetes Service (EKS) é um serviço de gerenciamento de contêineres que facilita a execução, escalabilidade e monitoramento de aplicações baseadas em contêineres usando o Kubernetes, um sistema de orquestração de contêineres de código aberto, na plataforma AWS.
+
+Em resumo, o Amazon EKS oferece uma maneira poderosa, segura e escalável de executar aplicações baseadas em contêineres na AWS, enquanto aproveita as vantagens do Kubernetes como um padrão de facto para a orquestração de contêineres.

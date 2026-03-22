@@ -1,0 +1,114 @@
+S3: Simple / Storage / Service 
+
+Seviço com acesso limitado de espaço 
+
+Observação: Arquivo = Objetos
+Observação: Pasta = Bucket
+
+Exemplos de utilização:
+
+- É utilizado para fazer backup
+- Para disponibilizar um app 
+- Vídeos 
+- Site stático
+- Archive
+
+O custo varia, de acordo com a velocidade que vc quer os seus dados acessados.
+
+Observação: O tamanho máximo de um objeto (Arquivo) único é de 5TB
+
+Observação: Arquivos com mais de 5GB precisam subir através do "multi-part upload"
+
+
+CRIANDO UMA BUCKET 
+
+O nome ter que ser único (Diferente de qualquer outra criada por outro usuário)
+
+
+CLASSES S3 
+
+Nível gratuito: 12 meses 5GB de armazenamento padrão.
+
+Classes do S3 são os tipos de armazenamento disponíveis, cada um deles tem uma característica específica, em resumo a escolha é baseada na disponibilidade e velocidade para acessar esses arquivos.
+
+HOSPEDANDO STATIC WEBSITE 
+
+Passos: 
+
+- Criar bucket 
+    - Desabilitar a opção "bloquear todo o acesso público"
+- Fazer uploado do arquivo index.html
+- Na configuração da bucket ir em "propriedades"
+    Clicar na sessão "Hospedagem de site estático" clicar em editar
+    Informar que o documento de índice é o index.html
+        Será gerada uma URL, mas ainda não está acessível
+- Na configuração da bucket ir em "permissões"
+    Na sessão "política do bucket" inserir o seguinte código 
+
+        {
+        "Version": "2012-10-17",
+        "Statement": [
+            {
+                "Sid": "PublicReadGetObject",
+                "Effect": "Allow",
+                "Principal": "*",
+                "Action": [
+                    "s3:GetObject"
+                ],
+                "Resource": [
+                    "arn:aws:s3:::bucket-name/*"
+                ]
+            }
+        ]
+        }
+
+    Isso permitirá que a bucket esteja pública também, com isso o link funcionará. 
+
+
+VERSIONAMENTO 
+
+Observação: Para cada atualização na versão de um objeto, será gerada uma cópia, ou seja, se a v1 tinha 100mb, a v2 102 e a v3 103mb, só em backup de versionamento vc está ocupando 100mb+102mb+103mb pois são todos arquivos diferentes.
+
+Observação: O versionamento só passa a valer a partir do momento que você habilita. Arquivos que foram upados anteriormente, só passam a ter versionamento a partir daquele momento.
+
+
+Passos: 
+
+- Abrir a bucket 
+- propriedades
+- versionamento
+    Ativar
+
+REPLICAÇÃO DE BUCKET 
+
+Exemplo de uso: Uma bucket com arquivos de desenvolvimento (Homologação) que depois são migrados para a bucket em produção 
+
+Observação: SRR (Same region replication) = Replicação para mesma região 
+
+Observação: CRR (Cross region replication) = Replicação em regiões diferentes
+
+Passos: 
+
+    - Criar a Bucket-bkp
+    - Ir na Bucket Principal
+    - Gerenciamento 
+    - Criar regra de replicação (preencher os dados)
+    - Apontar para a Bucket-bkp
+
+
+CRIPTOGRAFIA 
+
+Existem dois tipos: 
+
+- Server-Side (Default): Quando enviamos um arquivo, a própria AWS faz a criptografia. 
+- Client-side: Quando o cliente/usuário, antes de fazer o upload faz a criptografia
+
+STORAGE GATEWAY 
+
+Exemplo de uso: Quando vc tem um storage local na sua empresa e quer subir um bkp desse storage para o S3 da AWS. O storage gateway é o que faz o "meio de campo", pode ser um VM ou um dispositivo físico. 
+
+AWS SNOW (family)
+
+- SNOW CONE (pequeno porte): É um dispositivo que é enviado para sua empresa > Depois vc faz o upload dos arquivos para esse dispositivos > Envia para a AWS > E a AWS faz o upload desses arquivos para o S3
+- SNOW BALL (médio porte) 
+- SNOW MOBILE (Grande porte (caminhão))

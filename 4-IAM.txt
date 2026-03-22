@@ -1,0 +1,67 @@
+IAM (Identity and Access Management)
+
+Permite a administração de usuários, grupos, politícas de permissões, funções (Roles) dos serviços AWS 
+
+O diferencial de trabalhar com grupos é que ao invés de atribuir políticas individuais a cada usuário, você atribui a política ao grupo e coloca o usuário naquele grupo específico, por exemplo grupo admin, grupo developer etc...
+
+
+Observação: As policies dos serviços são escritas em JSON. O * significa todos os serviços.
+
+
+IAM x Identity Center (sucessor do AWS Single Sign-On)
+
+Em resumo, permite que os diferentes softwares que utilizam login, compartilhem essa informação entre sim, permitindo que o usuário logue em todas com uma única senha.
+
+Diferença do IAM - IC
+
+IC permite fazer tudo que o IAM faz... e permite associar a sua conta AWS para login de e-mail (via autenticação) ou outro software que a empresa utilize
+
+
+MFA (Multi Factory Autenticator)
+
+- Recomendado fazer com Google Authenticator
+
+
+AWS ORGANIZATIONS 
+
+Permite a criação de subcontas, mantendo a conectividade, políticas e meios de pagamento que já foram cadastrados na conta master
+
+
+IAM Identity Center (sucessor do AWS Single Sign-On)
+
+
+SENHAS (Password)
+
+IAM > Configurações de conta
+
+
+CLOUDSHELL E CLI
+
+CLI: É o recurso utilizado que permite acessar os serviços da AWS via linha de comando.
+
+Observação: Requer instalação e autenticação
+
+CloudShell: Máquina cloud linux 
+
+Observação: Não requer instalação e autenticação.
+
+
+AWS Access Key e SDK 
+
+CLI solicita duas autenticações: Access Key e private key 
+
+
+*SDK: Pelo que entendi, é uma espécie de API para que os app acessem os serviços da AWS
+
+
+
+chave alice: AKIA23OB5HVSDIV3Z5PH
+
+chave secreta alice: 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
+
+
+
+REPORTS 
+
+Relatório de credencias, gera um excel com todos os dados dos usuários.
+

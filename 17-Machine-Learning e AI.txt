@@ -1,0 +1,52 @@
+Amazon Transcribe 
+
+Converte fala para texto via ASR (Automatic Speech Recognition)
+Funciona em Multilinguagem 
+PII = Não mostra detalhes de informações pessoais (tel, cpf)
+
+Amazon Rekognition
+
+Ele consegue identificar pessoas em uma imagem, textos em uma imagem, objetos
+
+Excelente para moderação, ler placas de carro, identificar faces.
+
+
+Amazon Translate 
+
+Tradução
+
+Muito usado para traduções em sites
+
+
+Amazon Polly 
+
+Entraga um texto e ele faz a leitura 
+
+Alguns sites usam esse recurso para textos longos, e tem um mic do lado que o usuário pode pedir para o site ler.
+
+Amazon Comprehend 
+
+Ele tenta compreender o que você está falando, lendo ou escrevendo. 
+
+Exemplo de aplicação: Você pode usar para ouvir uma ligação e ter um feedback do tom, se está amigável, sério, tenso etc...
+
+
+Amazon LEX 
+
+Sistema de linguagem que funciona na Alexa
+
+Pode ser usado em call center ou chatbot por exemplo.
+
+Amazon Kendra
+
+Exemplo de aplicação: Você indica fonte de dados como Onedrive, Drive, Salesforce etc, O kendra via Machine Learn, vai aprender, você cria uma página como um web support chat e o usuário pergunta "quero comprar uma placa mãe XPTO, ela suporta um processador I9"... Se o Amazon Kendra tiver encontrado a informação dentro da sua fonte de dados, ele vai responder.
+
+
+Amazon Textract 
+
+Você pode passar uma imagem que tenha textos, ele le a imagem, extrai os textos e salva em um arquivo JSON
+
+
+Amazon Sagemaker
+
+Ele é utilizado por cientista de dados, para criar ML/AI 

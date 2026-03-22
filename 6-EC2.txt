@@ -1,0 +1,38 @@
+ELASTIC COMPUTE CLOUD (IAAS (VM))
+
+EC2: Provavelmente o serviço mais utilizado na AWS e o serviço que normalmente chama atenção das empresas para migrar para AWS. 
+
+Ao invés de um servidor fixo com alto custo, você paga para ter uma instância (um pedaço) personalizada, de um servidor na AWS (EC2) 
+
+
+TIPOS DE EC2 
+
+Existem modelos de instâncias voltados para cada necessidade.
+
+VALORES DE EC2 
+
+Modelos de aquisição: 
+
+    - Hosts dedicados $$$$$$$$ (Empresas financeiras / GOV)
+    - On demand $$$$$ (Disponibilidade imediata)
+    - Capacidade por demanda $$$ (Um aluguel por tempo pré determinado)
+    - Saving plans $ (Contrato de 1 a 3 anos)
+    - Spot $ (São até 90% mais baratos, porém, são servidores que a AWS pode requerer o servidor, normalmente usados em worload (Testes))
+
+
+EC2 INSTANCE 
+
+http://107.21.170.119/
+
+Acessando via SSH 
+
+Status:
+
+    - Executando
+    - Interrompido 
+    - Reiniciando 
+    - Encerrado
+
+Security group: É um firewall que está protegendo a instância EC2 permitindo que você controle e restrinja o tráfego de entrada e saída para suas instâncias do EC2 de uma maneira muito granular e específica.
+
+

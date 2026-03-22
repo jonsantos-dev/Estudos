@@ -1,0 +1,34 @@
+Route 53
+
+Serviço de DNS da AWS 
+
+Exemplo de aplicação: O usuário quer acessar uma URL (www.exemplo.com.br), e o seu site está localizado em uma instância EC2 com IPV4 público 201.1.1.1 
+O usuário não vai digitar esse IP, ele vai digitar a URL, o Route 53 tem a função de traduzir o endereçamento URL para IP (Record)
+
+Policies (Políticas)
+
+Simple Routing = PC > URL > Route 53 > IP 
+
+Weighted Routing = PC > URL > Route 53 > (Aqui está a diferença, você consegue colocar um balancer, para indicar para qual EC2 o usuário será apontado)
+
+
+Latency routing = PC (nos USA) > Route 53 > (E você tem instâncias EC2 em Londre, França e México. O Route 53 bate em cada EC2 e verifica a menor latência, e destina para o usuário)
+
+
+Failover routing = PC > Route 53 > 3 Instâncias EC2 (Basicamente, você define uma com principal, se por acaso ela falhar, o Route 53 destina o Acesso para as demais (Failover))
+
+AWS CloudFront
+
+O Amazon CloudFront é um serviço de rede de entrega de conteúdo (CDN) rápido e altamente seguro oferecido pela Amazon Web Services (AWS). Ele distribui dados, vídeos, aplicativos e APIs para os espectadores dos usuários com baixa latência e altas velocidades de transferência.
+
+S3 Transfer Acceleration
+
+
+O Amazon S3 Transfer Acceleration é um recurso do Amazon S3 que permite a transferência rápida e segura de arquivos por longas distâncias entre o cliente e um bucket do S3. Este serviço utiliza a rede global da Amazon CloudFront para acelerar as transferências de upload e download para o S3.
+
+
+AWS Global Accelerator
+
+
+O AWS Global Accelerator é um serviço que melhora a disponibilidade e o desempenho de suas aplicações para usuários em todo o mundo. Ele faz isso usando a rede global altamente disponível da AWS e redirecionando o tráfego de usuários para a aplicação mais próxima em termos de latência. Isso resulta em uma melhoria significativa na experiência do usuário.
+

@@ -1,0 +1,55 @@
+- AWS
+- Python para dados 
+- DEVOPS para AWS (Terraform)
+- 
+
+
+CLOUD WATCH: Ferramenta utilizada para criar alertar de consumo, no caso de serviços em uso
+
+
+Vantagens da CLOUD
+
+- Custo Reduzido: Só paga pelo que usa de fato.
+
+- Escala Global: Consegue alocar um servidor mais próximo do seu "novo" cliente a qualquer momento
+
+- Performance: Consequentemente ganhando performance 
+
+- Velocidade: Acessar e iniciar os serviços em minutos.
+
+- Produtividade
+
+- Segurança
+
+- Flexibilidade / Trabalho remoto
+
+
+TIPOS DE CLOUD 
+
+- SAAS: Software como serviço (APP, mail, dropbox)
+
+- PAAS: Plataforma como serviço (Sistemas operacionais, Banco de dados, Hospedagem)
+
+- IAAS: Infraestrutura como serviço (servidores, VM, storage)
+
+
+Núvem pública: AWS, AZURE, GCP
+
+    Exemplo do conceito: Quando vc aloca um servidor para um cliente, vc estará compartilhardo de um mesmo servidor com outras empresas.
+
+Núvem privada: Bancos, Governos, Instituições Financeiras
+
+    Exemplo do conceito: Apenas você usa o servidor.
+
+Núvem híbrida: Pub / Priv 
+
+    Exemplo do conceito: É possível alocar dados não sensíveis em servidores públicos e dados sensíveis em privados, o diferencial é que existe comunicação entre os servidores públicos e privados com alto nível de segurança.
+
+
+AWS SUPPORT 
+
+* Estudar sobre as diferenças dos planos de suporte
+
+https://aws.amazon.com/pt/premiumsupport/plans/
+
+

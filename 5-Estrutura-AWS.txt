@@ -1,0 +1,21 @@
+ESTRUTURA AWS 
+
+Infraestrutura Global 
+
+É divida em Regiões > Zonas de disponibilidade (Data center) > Zonais Locais > Wavelenght > AWS Outposts
+
+Região: Uma região da AWS é uma área geográfica que contém pelo menos duas Zonas de Disponibilidade
+
+Zonas de disponibilidade (AZ): São os Data Center (Servidores)
+
+Zona local: São Data center menores, normalmente localizado em cidades menores, conectados ao DC da cidade maior.
+
+Wavelenght: Infraestrutura otimizada para aplicações móveis, devido a baixa latência.
+
+AWS Outposts: A AWS consegue levar a infraestrutura pra qualquer datacenter, por exemplo para dentro de um cliente (on-premises)
+
+
+
+AWS SHARE RESPONSABILITY MODEL 
+
+Divisão de responsabilidade da empresa e AWS. Em resumo nem tudo o que vier acontecer de errado, é culpa da AWS.
