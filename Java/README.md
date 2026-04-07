@@ -7,7 +7,7 @@ Este diretório centraliza meu progresso e aprendizado na linguagem **Java**, se
 ## 🚀 Status do Aprendizado
 - [x] Lógica de Programação (Sequencial, Condicional, Repetitiva)
 - [x] Introdução à POO (Classes, Atributos, Métodos)
-- [ ] Construtores, Palavra `this`, Sobrecarga e Encapsulamento
+- [x] Construtores, Palavra `this`, Sobrecarga e Encapsulamento
 - [ ] Memória, Vetores e Listas
 - [ ] Tópicos Especiais (Data-Hora)
 
