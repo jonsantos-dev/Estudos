@@ -1,18 +1,36 @@
-## Getting Started
+# 🚀 Projeto: Gestão de Funcionários com Java Streams
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+Este projeto faz parte dos meus estudos de Java, focado na manipulação de coleções dinâmicas (`ArrayList`) e no uso da API de Streams para validação e busca de dados.
 
-## Folder Structure
+## 🛠️ Funcionalidades
 
-The workspace contains two folders by default, where:
+- **Cadastro Dinâmico**: Permite definir a quantidade de funcionários a serem inseridos.
+- **Validação de ID Único**: Utiliza `.stream().anyMatch()` para garantir que nenhum ID seja duplicado durante o cadastro.
+- **Busca e Atualização**: Localiza um funcionário específico por ID usando `.stream().filter().findFirst()` para aplicar aumentos salariais.
+- **Tratamento de Escopo**: Implementação de lógica para garantir que variáveis locais sejam "effectively final" para uso em expressões Lambda.
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+## 📚 Conceitos Aprendidos
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
+### 1. Java Streams API
+Aprendi a utilizar a "esteira de processamento" do Java para:
+*   **Filtrar** dados de forma declarativa.
+*   **Localizar** referências de objetos dentro de listas sem usar loops `for` manuais complexos.
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
+### 2. Escopo e Inicialização
+*   **Definite Assignment**: A importância de inicializar variáveis locais para evitar erros de compilação.
+*   **Effectively Final**: Por que variáveis usadas dentro de lambdas não podem ter seu valor alterado após a criação.
 
-## Dependency Management
+### 3. Collections Framework
+*   Diferença entre **Arrays estáticos** e **ArrayLists dinâmicos**.
+*   Importância de persistir objetos na lista usando `.add()` para que as buscas subsequentes funcionem.
 
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+## 💻 Como rodar o projeto
+1. Certifique-se de ter o JDK 17 ou superior instalado.
+2. Clone o repositório.
+3. Abra a pasta no **VS Code**.
+4. Execute o arquivo `App.java`.
+
+## ⚙️ Tecnologias
+- Java 25
+- Visual Studio Code
+- Git/GitHub
