@@ -60,7 +60,7 @@ public class App {
 
         int escolha;
         do {
-            System.out.printf("Escolha uma das opções abaixo: %n1 - Dar aumento%n2 - Encerrar sessão");
+            System.out.printf("Escolha uma das opções abaixo: %n1 - Dar aumento%n2 - Encerrar sessão%n");
             escolha = sc.nextInt();
 
             if(!(escolha == 1) || (escolha == 2)) {
@@ -85,6 +85,16 @@ public class App {
                         double porcentagemAumento = sc.nextDouble();
                         sc.nextLine();
                         
+                    Funcionario emp = funcionarios.stream()
+                        .filter(x -> x.getId() == idParaVerificar)
+                        .findFirst()         
+                        .orElse(null);       
+
+                    if (emp != null) {
+                        emp.aumentoSalario(porcentagemAumento);
+                    } else {
+                        System.out.println("ID não encontrado!");
+                    }
                     }
                     
                 } while (idJaExiste == false);

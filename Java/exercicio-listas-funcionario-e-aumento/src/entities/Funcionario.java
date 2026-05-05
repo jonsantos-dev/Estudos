@@ -25,7 +25,7 @@ public class Funcionario {
     }
 
     public void aumentoSalario(double porcentage){
-        salario = salario + (salario * 10) / 100;
+        salario = salario + (salario * porcentage) / 100;
     }
 
     public String toString(){
